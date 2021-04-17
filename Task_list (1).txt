@@ -1,0 +1,126 @@
+Instructions:
+1. Please submit .py files, with a method that encapsulates your code logic.
+2. Bonus points for making proper objects, and following good naming conventions.
+
+
+Task 1 
+
+Input:
+Read from the file "task1_json.txt"
+
+Process:
+Identify records on the basis of crieteria mentioned below and combine then to get the json format mentioned in output
+
+Criteria:
+WorkItemTypeUId = '00020040-0200-0010-0110-000000000000' 
+WorkItemTypeUId = '00020040-0200-0010-0100-000000000000'
+AssociationTypeUId = '00200880-0040-0000-0000-000000000000'
+
+Expected Output:
+[
+  {
+    "WorkItemUId": "528fbb5d-10a0-4c94-a1c0-c088c245d9d9",
+    "Associations": [
+      {
+        "WorkItemAssociationUId": "ea96eff2-eba9-4c08-82d2-cf76b13aff49",
+        "WorkItemUId": "528fbb5d-10a0-4c94-a1c0-c088c245d9d9",
+        "WorkItemAssociationId": "nan",
+        "EntityUId": "00020040-0200-0000-0000-000000000000",
+        "WorkItemTypeUId": "00020040-0200-0010-0110-000000000000",
+        "ItemAssociatedUId": "00000000-0000-0000-0000-000000000000",
+        "ItemExternalId": "Risk1",
+        "AssociationTypeUId": "00200400-0010-0000-0000-000000000000"
+      },
+      {
+        "WorkItemAssociationUId": "5b19d8a7-e7cf-4180-8006-a45f98dade0d",
+        "WorkItemUId": "528fbb5d-10a0-4c94-a1c0-c088c245d9d9",
+        "WorkItemAssociationId": "nan",
+        "EntityUId": "00020040-0200-0000-0000-000000000000",
+        "WorkItemTypeUId": "00020040-0200-0010-0110-000000000000",
+        "ItemAssociatedUId": "00000000-0000-0000-0000-000000000000",
+        "ItemExternalId": "Risk1",
+        "AssociationTypeUId": "00200400-0010-0000-0000-000000000000"
+      },
+      {
+        "WorkItemAssociationUId": "ed8a43e4-8427-46d4-b8a7-d3ebea614039",
+        "WorkItemUId": "528fbb5d-10a0-4c94-a1c0-c088c245d9d9",
+        "WorkItemAssociationId": "nan",
+        "EntityUId": "00020040-0200-0000-0000-000000000000",
+        "WorkItemTypeUId": "00020040-0200-0010-0100-000000000000",
+        "ItemAssociatedUId": "00000000-0000-0000-0000-000000000000",
+        "ItemExternalId": "Issues1",
+        "AssociationTypeUId": "00200400-0010-0000-0000-000000000000"
+      },
+      {
+        "WorkItemAssociationUId": "c5097569-cf41-4145-9508-53ea664e4d31",
+        "WorkItemUId": "528fbb5d-10a0-4c94-a1c0-c088c245d9d9",
+        "WorkItemAssociationId": "nan",
+        "EntityUId": "00020040-0200-0000-0000-000000000000",
+        "WorkItemTypeUId": "00020040-0200-0010-0100-000000000000",
+        "ItemAssociatedUId": "00000000-0000-0000-0000-000000000000",
+        "ItemExternalId": "Issues1",
+        "AssociationTypeUId": "00200400-0010-0000-0000-000000000000"
+      }
+    ]
+  }
+]
+
+
+Task 2 
+
+Input (You may copy this into your py file):
+defects = [
+            {'TestAssociationUId': '3cbe584c-f3be-4c7c-b52d-37146af08e95',
+            'TestUId':'4dbc1f56-0c78-4284-b271-4684d1b3855a',
+            'ItemAssociatedUId': '1d98fe43-fd5f-4e72-966f-d2c7e4a2129e'
+            }
+           ,
+           {'TestAssociationUId': '4f90e572-5ae0-4282-8f27-fbc724058f71',
+            'TestUId':'4dbc1f56-0c78-4284-b271-4684d1b3855a',
+            'ItemAssociatedUId':'379212c5-cc14-4770-bf65-609baffc7892'
+            },
+            {'TestAssociationUId': '4f90e572-5ae0-4282-8f27-fbc724058f71',
+            'TestUId':'8899as00-0c78-4284-b271-4684d1b3855a',
+            'ItemAssociatedUId':'379212c5-cc14-4770-bf65-609baffc7892'
+            },
+             {'TestAssociationUId': '4f90e572-5ae0-4282-8f27-fbc724058f71',
+            'TestUId':'8899as00-0c78-4284-b271-4684d1b3855a',
+            'ItemAssociatedUId':'379212c5-cc14-4770-bf65-609baffc7892'
+            }
+           ]
+
+testcase = [{'WorkItemAssociationUId': 'c318e4de-3a00-4ed4-ba2d-2ba436d4115b',
+             'WorkItemUId': 'f5e30ee9-4a4d-4c8b-aa68-e44f983520cc',
+             'TestUId':'4dbc1f56-0c78-4284-b271-4684d1b3855a'
+             },
+            {'WorkItemAssociationUId': 'c318e4de-3a00-4ed4-ba2d-2ba436d4115b',
+             'WorkItemUId': 'f5e30ee9-4a4d-4c8b-aa68-e44f983520cc',
+             'TestUId':'8899as00-0c78-4284-b271-4684d1b3855a'
+             }
+            ]
+
+Feature = [
+    {'WorkItemAssociationUId': 'c318e4de-3a00-4ed4-ba2d-2ba436d4115b',
+     'WorkItemUId': 'f5e30ee9-4a4d-4c8b-aa68-e44f983520cc',
+     'EntityUId':'00020040-0200-0010-0030-000000000000'
+     }
+    ]
+
+Epic = [
+    {'WorkItemAssociationUId': 'c318e4de-3a00-4ed4-ba2d-2ba436d4115b',
+     'WorkItemUId': 'f5e30ee9-4a4d-4c8b-aa68-e44f983520cc',
+     'EntityUId':'00020040-0200-0010-0020-000000000000'
+     }
+    ]
+
+
+Problem:
+Using "pandas" and "Groupby" and convert the above mentioned list of Dictionaries into the json output
+
+Output:
+[{"WorkItemUId": "f5e30ee9-4a4d-4c8b-aa68-e44f983520cc", "Associations": [{"WorkItemUId": "f5e30ee9-4a4d-4c8b-aa68-e44f983520cc", "WorkItemAssociationUId": "c318e4de-3a00-4ed4-ba2d-2ba436d4115b", "EntityUId": "00020040-0200-0010-0020-000000000000", "association": [{"WorkItemUId": "f5e30ee9-4a4d-4c8b-aa68-e44f983520cc", "WorkItemAssociationUId": "c318e4de-3a00-4ed4-ba2d-2ba436d4115b", "EntityUId": "00020040-0200-0010-0030-000000000000", "association": [{"WorkItemUId": "f5e30ee9-4a4d-4c8b-aa68-e44f983520cc", "TestUId": "4dbc1f56-0c78-4284-b271-4684d1b3855a", "WorkItemAssociationUId": "c318e4de-3a00-4ed4-ba2d-2ba436d4115b", "association": [{"TestAssociationUId": "3cbe584c-f3be-4c7c-b52d-37146af08e95", "TestUId": "4dbc1f56-0c78-4284-b271-4684d1b3855a", "ItemAssociatedUId": "1d98fe43-fd5f-4e72-966f-d2c7e4a2129e"}, {"TestAssociationUId": "4f90e572-5ae0-4282-8f27-fbc724058f71", "TestUId": "4dbc1f56-0c78-4284-b271-4684d1b3855a", "ItemAssociatedUId": "379212c5-cc14-4770-bf65-609baffc7892"}]}, {"WorkItemUId": "f5e30ee9-4a4d-4c8b-aa68-e44f983520cc", "TestUId": "8899as00-0c78-4284-b271-4684d1b3855a", "WorkItemAssociationUId": "c318e4de-3a00-4ed4-ba2d-2ba436d4115b", "association": [{"TestAssociationUId": "4f90e572-5ae0-4282-8f27-fbc724058f71", "TestUId": "8899as00-0c78-4284-b271-4684d1b3855a", "ItemAssociatedUId": "379212c5-cc14-4770-bf65-609baffc7892"}, {"TestAssociationUId": "4f90e572-5ae0-4282-8f27-fbc724058f71", "TestUId": "8899as00-0c78-4284-b271-4684d1b3855a", "ItemAssociatedUId": "379212c5-cc14-4770-bf65-609baffc7892"}]}]}]}]}]
+
+to be viewed in jsonviewer.com
+
+
+
